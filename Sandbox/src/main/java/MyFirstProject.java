@@ -8,14 +8,7 @@ public class MyFirstProject {
 		Point p2 = new Point();
 		p2.x = 5;
 		p2.y = 7;
-		double distance = distance(p1,p2);
+		double distance = p1.distance(p2);
 		System.out.println ("Distance between points x1 = " + p1.x + " y1 = " + p1.y + " and x2 = "+ p2.x + " y2 = "+p2.y+ " = " + distance);
-	}
-
-	public static double distance (Point a, Point b){
-		double katet1 = b.x - a.x;
-		double katet2 = b.y - a.y;
-		double gipotenuza = Math.sqrt((katet1*katet1)+(katet2*katet2));
-		return gipotenuza;
 	}
 }
