@@ -1,18 +1,18 @@
 package ru.stqa.pft.addressbook;
 
-import org.testng.annotations.*;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchElementException;
+import org.testng.annotations.Test;
 
-public class GroupCreationTest extends TestBase {
+
+public class GroupDeletionTests extends TestBase {
 
     @Test
-    public void testGroupCreation() throws Exception {
-        gotoGroupPage();
-        initGroupCreation();
-        fillGroupForm(new GroupData("test2", "test1", "test3"));
-        submitGroupCreation();
+    public void testGroupDeletion() throws Exception {
+        selectGroup();
+        deleteSelectedGroup();
         returnToGroupPage();
-        logoutGroupPage();
     }
 
     private boolean isElementPresent(By by) {
